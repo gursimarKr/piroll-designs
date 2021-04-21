@@ -23,38 +23,9 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <script>
-       $('document').ready(function(){
-        console.log('hello worlds!');
-           //max input field boxes
-           var maxfields = 10;
-           //fields wrapper
-           var wrapper = $(".input-fields-wrap");
-           //add button id
-           var addbutton = $(".add-field-button");
-           //initial text button
-           var x=1;
-           //remove button
-           var removebutton = $(".remove-field-button");
-           $(addbutton).click(function(e){
-                e.preventDefault();
-                if(x<maxfields){
-                    x++;
-                    console.log(x);
-                    $(wrapper).append('<div><input type="text" name="add-new-text"/><i class="pe-7s-close"></i></div>')
-                }
-           });
-           $(removebutton).click(function(e){
-               e.preventDefault();
-               var total_fields = wrapper[0].childNodes.length;
-               if(total_fields>1){
-	    	        wrapper[0].childNodes[total_fields-1].remove();
-	            }
-
-           });
-       })
-    </script>
-       <!-- header -->
+    <div class="site-container">
+        <header class="site-header">
+              <!-- header -->
        <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block"><!-- hidden spacer to center brand on mobile --></span>
@@ -80,37 +51,23 @@
                 <li class="nav-item">
                     <a href="./about.html" class="nav-link m-2 menu-item ">About</a>
                 </li>
-                 <li class="nav-item">
+                <li class="nav-item">
                     <a href="./contact.html" class="nav-link m-2 menu-item ">Contact</a>
+                </li>   <li class="nav-item">
+                    <a href="./contact.html" class="nav-link m-2 menu-item ">Login</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- ---- -->
-        <div class="input-fields-wrap-container">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <button class="btn btn-block btn-light add-field-button">Add a new</button>
-                    </div>
-                    <div class="col-md-6">
-                        <button class="btn btn-block btn-light remove-field-button">Remove</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-11">
-                        <div class="input-fields-wrap">
-                            <div><input type="text" name="mytext[]"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1">
-                        <a class="remove-field-button" href="#"></a><i class="pe-7s-close"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div> 
+        </header>
+
         
-         <!-- footer -->
+        <main class="site-content">
+          
+        </main>
+        <footer class="site-footer">
+                  <!-- footer -->
    <div class="footer-background">
     <div class="container py-5">
         <div class="row">
@@ -156,5 +113,8 @@
   
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+        </footer>
+      </div>
 </body>
 </html>
